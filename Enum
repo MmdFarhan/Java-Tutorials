@@ -1,0 +1,9 @@
+enum status{
+    Running,failed,pending,Success
+}
+class Main{
+    public static void main(String[] args){
+        status[] s =  status.values();
+        System.out.println(s[2]);
+    }
+}
