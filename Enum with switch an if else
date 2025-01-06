@@ -1,0 +1,42 @@
+enum status{
+    Running,failed,pending,Success
+}
+class Main{
+    public static void main(String[] args){
+      status s = status.failed;
+      if(s==status.Running){
+          System.out.println("ALL Good");
+      }
+      
+      else if(s==status.failed){
+          System.out.println("try again");
+      }
+      
+      else if(s==status.pending){
+          System.out.println("Please wait");
+      }
+      else{
+          System.out.println("Done");
+      }
+*******Using Switch********
+    status s = status.Success;
+      switch(s){
+          case Running:
+              System.out.println("All Good");
+              break;
+              
+          case failed:
+              System.out.println("try agian");
+              break;
+              
+          case pending:
+              System.out.println("Plz Wait");
+              break;
+              
+          default:
+              System.out.println("Done");
+              
+      }
+       
+    }
+}
