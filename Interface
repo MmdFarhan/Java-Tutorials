@@ -1,0 +1,63 @@
+
+*******Without Interface***********
+abstract class Computer{
+    public abstract void code();
+}
+class Desktop extends Computer{
+    public void code(){
+        System.out.println("Codes:Executes:Runs:Faster");
+    }
+}
+class Laptop extends Computer{
+    public void code(){
+        System.out.println("Codes:Executes:Runs");
+    }
+}
+
+class developer{
+    public void deve(Computer com){
+        com.code();
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Computer lap = new Laptop();
+        Computer desk = new Desktop();
+        developer dev = new developer();
+        dev.deve(desk);
+        
+    }
+}
+
+*******With Interface***********
+
+interface Computer{
+    void code();
+}
+class Desktop implements Computer{
+    public void code(){
+        System.out.println("Codes:Executes:Runs:Faster");
+    }
+}
+class Laptop implements Computer{
+    public void code(){
+        System.out.println("Codes:Executes:Runs");
+    }
+}
+
+class developer{
+    public void deve(Computer com){
+        com.code();
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Computer lap = new Laptop();
+        Computer desk = new Desktop();
+        developer dev = new developer();
+        dev.deve(desk);
+        
+    }
+}
